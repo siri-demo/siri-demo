@@ -288,9 +288,40 @@
             font-size: 12px;
         }
     </style>
+    <script type='text/javascript' data-cfasync='false'>
+(function () {
+  var done = false;
+  var key = "aaf5da71db4967b2a255ab9af4a1f3a104d894344d397e2d838244d868a9775a";
+  var script = document.createElement('script');
+  script.async = true;
+  script.type = 'text/javascript';
+  script.src = "https://bookmebus.com/embed/loaders.js?locale=en";
+  document.getElementsByTagName('head').item(0).appendChild(script);
+  script.onreadystatechange = script.onload = function (e) {
+    if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) {
+      BmbWidget.init({key: 'aaf5da71db4967b2a255ab9af4a1f3a104d894344d397e2d838244d868a9775a'});
+      done = true;
+    }
+  };
+
+  var link = document.createElement('link');
+  link.rel = "stylesheet";
+  link.type = 'text/css';
+  link.href = "https://bookmebus.com/embed/loaders.css?locale=en";
+  document.getElementsByTagName('head').item(0).appendChild(link);
+
+  })();
+</script>
 </head>
 
 <body class="" style="visibility: hidden;">
+    
+          <div class="bmb-widget-search"
+     data-from='Phnom Penh'
+     data-to='Siem Reap'
+     data-utm-source= 'mysite'
+     data-style='background: #eee'>
+</div>
 
 <section id="top_sect" class="second">
     <button id="main_btn" onclick="DemoApp.sendMessage('');">Send «Hello, World!»</button>
